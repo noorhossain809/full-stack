@@ -20,6 +20,7 @@ const uri = `mongodb+srv://gentsCollection:test1234@cluster0.vjh6y.mongodb.net/p
 console.log(uri);
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
+  console.log(err)
   const itemCollection = client.db("products").collection("items");
   const checkingCollection = client.db("products").collection("checking");
   
